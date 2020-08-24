@@ -49,7 +49,10 @@ $ cd Python-Rest-API
 $ virtualenv venv
 
 # Ativando uma virtualenv (Linux ou macOS)
-$ source venv/bin/activate  
+$ source venv/bin/activate
+
+# Instalando Dependências
+$ pip install fastapi uvicorn
 
 # Execute aplicação em modo de produção
 python main.py  
