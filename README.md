@@ -32,8 +32,9 @@ Deve-se aceitar os operadores abaixo:
 ## Pré-requisitos
 
 Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
-[Git](https://git-scm.com), [Node.js](https://nodejs.org/en/).
+[Git](https://git-scm.com), [Python 3.6+](https://www.python.org/downloads/release/python-360) e [virtualenv](https://pypi.org/project/virtualenv/).
 Além disso é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
+
 
 ## Rodando o Back End
 
@@ -53,7 +54,7 @@ $ source venv/bin/activate
 # Execute aplicação em modo de produção
 python main.py  
 
-# Ou execute aplicação em modo de desenvolvimento com auto reload ao salvar
+# Ou execute aplicação em modo de desenvolvimento
 $ uvicorn main:app --reload
 
 # O servidor inciará na porta:8000 - acesse http://127.0.0.1:8000
@@ -67,9 +68,14 @@ A estrutura de arquivos está da seguinte maneira:
 Python-Rest-API
 ├── functions.py
 ├── github
-│   └── problema.png
+│   ├── operacoes.png
+│   ├── problema.png
+│   ├── python_rest_api.pdf
+│   └── soma.png
+├── Insomnia_routers.json
 ├── main.py
 ├── README.md
+├── requirements.txt
 └── venv
     ├── bin ...
     ├── lib ...
@@ -78,16 +84,31 @@ Python-Rest-API
 
 ## Demonstração da aplicação
 
-<section class="block col-12 block-desktop col-12-desktop"><div><span><div class="opblock-tag-section"><h4 class="opblock-tag" id="operations-tag-soma" data-tag="soma" data-is-open="false"><a class="nostyle" href="#/soma"><span>soma</span></a><small><div class="renderedMarkdown"><p>Soma entre dois números binários</p></div></small><div></div><button class="expand-operation" title="Expand operation"><svg class="arrow" width="20" height="20"><use href="#large-arrow" xlink:href="#large-arrow"></use></svg></button></h4><noscript></noscript></div></span><span><div class="opblock-tag-section"><h4 class="opblock-tag" id="operations-tag-subtracao" data-tag="subtracao" data-is-open="false"><a class="nostyle" href="#/subtracao"><span>subtracao</span></a><small><div class="renderedMarkdown"><p>Subtração entre dois números binários</p></div></small><div></div><button class="expand-operation" title="Expand operation"><svg class="arrow" width="20" height="20"><use href="#large-arrow" xlink:href="#large-arrow"></use></svg></button></h4><noscript></noscript></div></span><span><div class="opblock-tag-section"><h4 class="opblock-tag" id="operations-tag-multiplicacao" data-tag="multiplicacao" data-is-open="false"><a class="nostyle" href="#/multiplicacao"><span>multiplicacao</span></a><small><div class="renderedMarkdown"><p>Multiplicação entre dois números binários</p></div></small><div></div><button class="expand-operation" title="Expand operation"><svg class="arrow" width="20" height="20"><use href="#large-arrow" xlink:href="#large-arrow"></use></svg></button></h4><noscript></noscript></div></span><span><div class="opblock-tag-section"><h4 class="opblock-tag" id="operations-tag-divisao" data-tag="divisao" data-is-open="false"><a class="nostyle" href="#/divisao"><span>divisao</span></a><small><div class="renderedMarkdown"><p>Divisão entre dois números binários</p></div></small><div></div><button class="expand-operation" title="Expand operation"><svg class="arrow" width="20" height="20"><use href="#large-arrow" xlink:href="#large-arrow"></use></svg></button></h4><noscript></noscript></div></span><span><div class="opblock-tag-section"><h4 class="opblock-tag" id="operations-tag-resto" data-tag="resto" data-is-open="false"><a class="nostyle" href="#/resto"><span>resto</span></a><small><div class="renderedMarkdown"><p>Resto da divisão entre dois números binários</p></div></small><div></div><button class="expand-operation" title="Expand operation"><svg class="arrow" width="20" height="20"><use href="#large-arrow" xlink:href="#large-arrow"></use></svg></button></h4><noscript></noscript></div></span></div></section>
+O Swagger gera os documentos da API de forma atualizada/automática conforme a API é alterada.
 
+Ao rodar o servidor é disponibilizado a documentação automática em: http://127.0.0.1:8000 Ex:
 
+<h1 align="center">
+  <img alt="operacoes" title="#operacoes" src="./github/operacoes.png" />
+</h1>
+
+A documetanção é interativa permitindo fazer testes na própria documentação ex:
+
+<h1 align="center">
+  <img alt="soma" title="#soma" src="./github/soma.png" />
+</h1>
+
+<a href="./github/python_rest_api.pdf">Exemplo em PDF das rotas</a> 
 
 ## Tecnologias
 
 As seguintes ferramentas foram usadas na construção do projeto:
 
 - [Python 3.6+](https://www.python.org/downloads/release/python-360)
+- [PIP](https://pypi.org/project/pip/)
+- [virtualenv](https://pypi.org/project/virtualenv/)
 - [FastAPI](https://fastapi.tiangolo.com)
+- [Swagger](https://swagger.io/solutions/api-design/)
 - [Uvicorn](https://www.uvicorn.org)
 
 ## License
