@@ -26,6 +26,12 @@ def tags_metadata():
     ]
     return tags_metadata
 
+def description_api():
+    description = ''' 
+        Teste para vaga Desenvolvedor Home Office na Digistarts disponível no repositório: 
+        <a href=\"https://github.com/brlga002/Python-Rest-API\" target=\"_blank\">Python Rest API</a>  
+        Uma versão em note está em <a href=\"https://github.com/brlga002/digistarts\" target=\"_blank\">digistarts</a>'''
+    return description
 
 def verifica_operacao_permitida(fistNumber, secondNumber):
     try:
