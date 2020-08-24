@@ -92,7 +92,7 @@ Ao rodar o servidor é disponibilizado a documentação automática em: http://1
   <img alt="operacoes" title="#operacoes" src="./github/operacoes.png" />
 </h1>
 
-A documetanção é interativa permitindo fazer testes na própria documentação ex:
+A documetanção é interativa permitindo fazer testes na própria interface:
 
 <h1 align="center">
   <img alt="soma" title="#soma" src="./github/soma.png" />
