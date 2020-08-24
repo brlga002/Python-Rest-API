@@ -89,7 +89,7 @@ Python-Rest-API
 
 O Swagger gera os documentos da API de forma atualizada/automática conforme a API é alterada.
 
-Ao rodar o servidor é disponibilizado a documentação automática em: http://127.0.0.1:8000 Ex:
+Ao rodar o servidor abra o navegador em: http://127.0.0.1:8000 
 
 <h1 align="center">
   <img alt="operacoes" title="#operacoes" src="./github/operacoes.png" />
