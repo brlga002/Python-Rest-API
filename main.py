@@ -1,12 +1,13 @@
 from typing import Optional
 from fastapi import FastAPI, HTTPException
+import uvicorn
 
 import functions as fc
 
+
 app = FastAPI(
     title="Python Rest API",
-    description=
-    "Teste para vaga Desenvolvedor Home Office na Digistarts a versão em note está em <a href=\"https://github.com/brlga002/digistarts\" target=\"_blank\">digistarts</a>",
+    description= fc.description_api(),    
     version="1.0.0",
     openapi_tags=fc.tags_metadata(),
     docs_url="/",
@@ -67,3 +68,7 @@ def resto_da_divisao_dois_numeros_binarios(fistNumber: Optional[str],
     fc.verifica_segundo_maior_primeiro(fistNumber, secondNumber)
     result = int(fistNumber % secondNumber)
     return fc.formata_zero_esquerda(bin(result))
+
+
+if __name__ == "__main__":
+    uvicorn.run(app, host="127.0.0.1", port=8000)    
